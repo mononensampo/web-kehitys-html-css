@@ -1,16 +1,22 @@
-const name = "Sampo";
+console.log("Hello World!");
+
+const userName = "Sampo";
 const age = 21;
 const favoriteAnimal = "Manuli";
 
-const userAge = prompt("What is your age?")
-const userName = prompt("What is your name?")
+console.log("My name is " + userName);
+console.log("I am " + age + " years old.");
+console.log("My favorite animal is " + favoriteAnimal);
 
-if (userAge < 18) {
-    alert("You are under 18.");
-}   
-else if (userAge > 18) {
-    alert("You are an adult!");
-}
+alert("welcome to my website!");
 
-function greetUser(name) { console.log("Hello " + name + "!"); }
-greetUser(userName);
+const visitorName = prompt("What is your name?")
+
+console.log("Hello " + visitorName + "!");
+
+const visitorfavoriteAnimal = prompt("What is your favorite animal?")
+
+console.log("Your favorite animal is " + visitorfavoriteAnimal + "!");
+
+console.log("Hello " + visitorName + "! Your favorite animal is " + visitorfavoriteAnimal + "!");
+
