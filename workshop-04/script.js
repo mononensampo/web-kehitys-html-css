@@ -85,4 +85,14 @@ animalSelect.addEventListener("change", function() {
     }
 });
 
+animalImage.addEventListener('mouseenter', () => {
+  animalImage.classList.add('image-highlight');
+});
+
+
+animalImage.addEventListener('mouseleave', () => {
+  animalImage.classList.remove('image-highlight');
+});
+
+// harjoitus 4
 
