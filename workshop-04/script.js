@@ -96,3 +96,39 @@ animalImage.addEventListener('mouseleave', () => {
 
 // harjoitus 4
 
+
+const animalForm = document.querySelector("#animalForm");
+const animalInput = document.querySelector("#observationAnimal");
+const dateInput = document.querySelector("#observationDate");
+const observationLocationInput = document.querySelector("#observationLocation");
+const observationTableBody = document.querySelector("#observationTable tbody");
+
+
+animalForm.addEventListener("submit", function(event) {
+    
+    event.preventDefault();
+
+    
+    const animal = animalInput.value;
+    const date = dateInput.value;
+    const location = observationLocationInput.value;
+
+   
+    createObservationRow(animal, date, location);
+
+    
+    animalForm.reset();
+});
+
+
+function createObservationRow(animal, date, location) {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${animal}</td>
+        <td>${location}</td>
+        <td>${date}</td>
+    `;
+
+    observationTableBody.appendChild(row);
+}
